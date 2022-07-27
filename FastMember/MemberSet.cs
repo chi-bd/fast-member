@@ -59,14 +59,7 @@ namespace FastMember
 
         bool ICollection<Member>.Contains(Member item) {
 #if NET20
-            foreach (var _item in members)
-            {
-                if (item == _item)
-                {
-                    return true;
-                }
-            }
-            return false;
+            return Array.IndexOf<Member>(members, item) >= 0;
 #else
             return members.Contains(item);
 #endif
