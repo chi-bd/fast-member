@@ -10,7 +10,7 @@ using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Running;
 using BenchmarkDotNet.Exporters;
-using BenchmarkDotNet.Exporters.Csv;
+//using BenchmarkDotNet.Exporters.Csv;
 
 namespace FastMemberTests
 {
@@ -30,7 +30,7 @@ namespace FastMemberTests
 
             private Type type;
 
-            public static void Main2(string[] args)
+            public static void Main(string[] args)
             {
                 var summary = BenchmarkRunner.Run<FastMemberPerformance>(new Config());
                 Console.WriteLine();
